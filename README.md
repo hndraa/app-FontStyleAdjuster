@@ -45,27 +45,32 @@ This application integrates font size, text color, and background color controls
 ### Application Interface
 Display the main application window, including the live preview area, customization controls, and action buttons.
 
-**Screenshot:** `screenshots/main-interface.png`
+<img width="761" height="731" alt="image" src="https://github.com/user-attachments/assets/07d568c6-7826-4499-abd4-3416dd930497" />
+
 
 ### Font Size Adjustment
 Demonstrate how moving the font size slider changes the preview text size.
 
-**Screenshot:** `screenshots/font-size-adjustment.png`
+<img width="762" height="732" alt="image" src="https://github.com/user-attachments/assets/86cf4b06-9691-4058-a461-2c3e1b1e7c93" />
+
 
 ### Text Color Adjustment
 Demonstrate how the text color slider changes the preview text from black to white.
 
-**Screenshot:** `screenshots/text-color-adjustment.png`
+<img width="763" height="732" alt="image" src="https://github.com/user-attachments/assets/1e15135a-7476-4648-9949-b47ba1b2cbc1" />
+
 
 ### Background Color Adjustment
 Demonstrate how the background color slider changes the preview background from black to white.
 
-**Screenshot:** `screenshots/background-color-adjustment.png`
+<img width="761" height="731" alt="image" src="https://github.com/user-attachments/assets/45a9c3c8-a80e-42ef-baca-1eeaacfe2a6d" />
+
 
 ### Reset Settings
 Show the application after clicking Reset Settings, restoring the default font size and color values.
 
-**Screenshot:** `screenshots/reset-settings.png`
+<img width="761" height="730" alt="image" src="https://github.com/user-attachments/assets/1a7be53a-8b97-4d4f-bbf6-c9a2da1b9f77" />
+
 
 *Note: Replace these screenshot placeholders with actual screenshots captured from the running application.*
 
