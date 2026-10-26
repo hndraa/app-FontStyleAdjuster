@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FontStyleAdjuster</class>
+ <widget class="QMainWindow" name="FontStyleAdjuster">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>660</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Font Studio | Hndraa Apss</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow, QWidget#centralwidget {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+QLabel {
+    color: #e2e8f0;
+}
+QLabel#eyebrowLabel {
+    color: #a5b4fc;
+    font-size: 10pt;
+    font-weight: 700;
+}
+QLabel#titleLabel {
+    color: #f8fafc;
+    font-size: 24pt;
+    font-weight: 700;
+}
+QLabel#subtitleLabel {
+    color: #94a3b8;
+    font-size: 10pt;
+}
+QFrame#previewCard, QFrame#controlCard {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+}
+QLabel#previewLabel {
+    border-radius: 12px;
+}
+QLabel#fontSizeValue, QLabel#fontColorValue,
+QLabel#backgroundColorValue {
+    background-color: #312e81;
+    color: #e0e7ff;
+    border-radius: 7px;
+    padding: 5px 8px;
+    font-weight: 700;
+}
+QSlider::groove:horizontal {
+    height: 6px;
+    background: #334155;
+    border-radius: 3px;
+}
+QSlider::sub-page:horizontal {
+    background: #818cf8;
+    border-radius: 3px;
+}
+QSlider::add-page:horizontal {
+    background: #334155;
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    background: #c7d2fe;
+    border: 2px solid #818cf8;
+    width: 16px;
+    margin: -7px 0;
+    border-radius: 9px;
+}
+QPushButton {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 16px;
+    font-weight: 700;
+}
+QPushButton:hover {
+    background-color: #4f46e5;
+}
+QPushButton#closeButton {
+    background-color: #334155;
+}
+QPushButton#closeButton:hover {
+    background-color: #475569;
+}
+   </string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="leftMargin">
+     <number>30</number>
+    </property>
+    <property name="topMargin">
+     <number>26</number>
+    </property>
+    <property name="rightMargin">
+     <number>30</number>
+    </property>
+    <property name="bottomMargin">
+     <number>22</number>
+    </property>
+    <property name="spacing">
+     <number>16</number>
+    </property>
+
+    <item>
+     <widget class="QLabel" name="eyebrowLabel">
+      <property name="text">
+       <string>FONT STUDIO / LIVE PREVIEW</string>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>Font Style Adjuster</string>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="subtitleLabel">
+      <property name="text">
+       <string>Customize your text appearance with simple, real-time controls.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QFrame" name="previewCard">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <layout class="QVBoxLayout" name="previewLayout">
+       <property name="leftMargin">
+        <number>18</number>
+       </property>
+       <property name="topMargin">
+        <number>18</number>
+       </property>
+       <property name="rightMargin">
+        <number>18</number>
+       </property>
+       <property name="bottomMargin">
+        <number>18</number>
+       </property>
+       <property name="spacing">
+        <number>12</number>
+       </property>
+
+       <item>
+        <widget class="QLabel" name="previewTitle">
+         <property name="text">
+          <string>LIVE PREVIEW</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #a5b4fc; font-weight: 700;</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="previewLabel">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>140</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TEXT</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>30</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="identityLabel">
+         <property name="text">
+          <string>Hndraa Apss</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #94a3b8; font-size: 9pt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QFrame" name="controlCard">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <layout class="QVBoxLayout" name="controlsLayout">
+       <property name="leftMargin">
+        <number>20</number>
+       </property>
+       <property name="topMargin">
+        <number>18</number>
+       </property>
+       <property name="rightMargin">
+        <number>20</number>
+       </property>
+       <property name="bottomMargin">
+        <number>18</number>
+       </property>
+       <property name="spacing">
+        <number>14</number>
+       </property>
+
+       <item>
+        <layout class="QHBoxLayout" name="fontSizeHeader">
+         <item>
+          <widget class="QLabel" name="fontSizeTitle">
+           <property name="text">
+            <string>Font size</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="sizeSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="fontSizeValue">
+           <property name="minimumWidth">
+            <number>60</number>
+           </property>
+           <property name="text">
+            <string>30 pt</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <layout class="QHBoxLayout" name="fontSizeRow">
+         <item>
+          <widget class="QLabel" name="fontSizeMin">
+           <property name="text">
+            <string>20 pt</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="fontSizeSlider">
+           <property name="minimum">
+            <number>20</number>
+           </property>
+           <property name="maximum">
+            <number>60</number>
+           </property>
+           <property name="value">
+            <number>30</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>5</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="fontSizeMax">
+           <property name="text">
+            <string>60 pt</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <layout class="QHBoxLayout" name="fontColorHeader">
+         <item>
+          <widget class="QLabel" name="fontColorTitle">
+           <property name="text">
+            <string>Text color</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="fontSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QFrame" name="fontColorSwatch">
+           <property name="minimumSize">
+            <size>
+             <width>22</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>22</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: white; border: 1px solid #64748b; border-radius: 6px;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="fontColorValue">
+           <property name="minimumWidth">
+            <number>42</number>
+           </property>
+           <property name="text">
+            <string>255</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <layout class="QHBoxLayout" name="fontColorRow">
+         <item>
+          <widget class="QLabel" name="fontColorMin">
+           <property name="text">
+            <string>Black</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="fontColorSlider">
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>255</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>25</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="fontColorMax">
+           <property name="text">
+            <string>White</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <layout class="QHBoxLayout" name="backgroundHeader">
+         <item>
+          <widget class="QLabel" name="backgroundColorTitle">
+           <property name="text">
+            <string>Background color</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="backgroundSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QFrame" name="backgroundColorSwatch">
+           <property name="minimumSize">
+            <size>
+             <width>22</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>22</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: black; border: 1px solid #64748b; border-radius: 6px;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="backgroundColorValue">
+           <property name="minimumWidth">
+            <number>42</number>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <layout class="QHBoxLayout" name="backgroundColorRow">
+         <item>
+          <widget class="QLabel" name="backgroundColorMin">
+           <property name="text">
+            <string>Black</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="backgroundColorSlider">
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>25</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="backgroundColorMax">
+           <property name="text">
+            <string>White</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="footerLayout">
+      <item>
+       <widget class="QLabel" name="footerLabel">
+        <property name="text">
+         <string>Made with Python &amp; PyQt5</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 9pt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="footerSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="resetButton">
+        <property name="text">
+         <string>Reset settings</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="closeButton">
+        <property name="text">
+         <string>Close</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  </widget>
+  <resources/>
+  <connections/>
+ </ui>
