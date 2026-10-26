@@ -82,12 +82,6 @@ Show the application after clicking Reset Settings, restoring the default font s
 app-font-style-adjuster/
 ├── main.py
 ├── font_style_adjuster.ui
-├── screenshots/
-│   ├── main-interface.png
-│   ├── font-size-adjustment.png
-│   ├── text-color-adjustment.png
-│   ├── background-color-adjustment.png
-│   └── reset-settings.png
 └── README.md
 ```
 
@@ -96,13 +90,13 @@ app-font-style-adjuster/
 **Step 1. Clone the repository**
 
 ```bash
-git clone https://github.com/Hndraa-Apss/app-font-style-adjuster.git
+git clone https://github.com/hndraa/app-FontStyleAdjuster.git
 ```
 
 **Step 2. Navigate to the project directory**
 
 ```bash
-cd app-font-style-adjuster
+cd app-FontStyleAdjuster
 ```
 
 **Step 3. Install the dependency**
@@ -134,9 +128,3 @@ python main.py
 5. Observe the changes in the live preview.
 6. Click **Reset Settings** to restore the default values.
 7. Click **Close** to exit the application.
-
-## Author
-
-**Hndraa Apss**
-
-GitHub: [Hndraa-Apss](https://github.com/Hndraa-Apss)
